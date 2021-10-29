@@ -1,4 +1,4 @@
-this.array=[]
+this.array = []
 class Worker {
     #experience
     constructor(fullName, dayRate, workingDays) {
@@ -15,7 +15,7 @@ class Worker {
     showSalaryWithExperience() {
         let salaryExp = this.dayRate * this.workingDays * this.#experience
         console.log(this.fullName + ':' + salaryExp)
-        if(this.#experience==1.5){
+        if (this.#experience == 1.5) {
             array.push(salaryExp)
         }
     }
@@ -25,13 +25,20 @@ class Worker {
     set setExp(experience) {
         this.#experience = experience;
     }
+
 }
-///how to sort array? it doesn't work
-function sortedSalaryWithExperience () {
-array=array.sort((a, b) => b-a);
-console.log(array)
-}
-sortedSalaryWithExperience()
+
+//I coundn't create working code in this way :(
+
+// function sortedSalaryWithExperience () {
+// let newArray=array.sort((a, b) => b-a);
+// let newNewArray=newArray.sort((a, b) => b-a);
+// return console.log(newNewArray);
+// }
+// sortedSalaryWithExperience()
+
+
+
 
 
 
@@ -61,4 +68,16 @@ worker3.showSalaryWithExperience();
 worker3.setExp = 1.5;
 console.log("New experience: " + worker3.showExp);
 worker3.showSalaryWithExperience();
+
+function sortExperiencedSalary() {
+    const sortedSalary = array.sort((a, b) =>
+        b - a)
+    console.log(sortedSalary)
+}
+sortExperiencedSalary();
+
+
+
+
+
 

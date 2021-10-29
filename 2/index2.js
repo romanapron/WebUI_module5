@@ -5,7 +5,7 @@ class Person {
         
     }
     showFullName() {
-        return ` ${this.name}+ ${this.surname}`
+        return ` ${this.name} ${this.surname}`
     }
 }
 class Student extends Person {
@@ -16,10 +16,11 @@ class Student extends Person {
 
     showFullName(middleName) {
         this.middleName = middleName
-        return `${this.middleName}`;
+        return super.showFullName()+ ` ${this.middleName}`;
     }
     showCourse() {
-        return 2021 - `${this.year}`
+        let currentYear= new Date().getFullYear();
+        return currentYear - `${this.year}`
     }
 }
 
